@@ -1,0 +1,99 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mgi__login{
+    @apply  absolute top-0 left-0 right-0 bottom-0 bg-[#6a88a1]
+}
+.mgi__login-form{
+    @apply absolute top-[21%] left-1/2 translate-x-[-50%] h-[395pxpx] w-[320px] bg-[#ffffff] rounded-lg
+}
+.mgi__login-form__block{
+    @apply  px-[30px] py-[45px]
+}
+.mgi__login-form__logo{
+    @apply flex flex-col items-center mb-[30px]
+}
+.mgi__login-form__logo img{
+    @apply w-[137px] h-[26px]
+}
+.mgi__login-form__desc{
+    @apply flex flex-col items-center mb-10
+}
+.mgi__login-form__desc p{
+    @apply text-[14px] h-[5px] font-bold
+}
+.mgi__login-form__username{
+    @apply flex flex-col mb-[15px]
+}
+.mgi__login-form__password span,
+.mgi__login-form__username span{
+    @apply font-semibold text-[12px] mb-2
+}
+
+.mgi__login-form__password input,
+.mgi__login-form__username input{
+    @apply h-[30px] text-[13px] px-2
+}
+.mgi__login-form__password{
+    @apply flex flex-col mb-[15px] relative
+}
+.mgi__login-form__password img{
+    @apply h-[15px] absolute top-[26px] right-2 cursor-pointer
+}
+
+.mgi__login-form__require{
+    @apply flex items-center justify-between
+}
+.mgi__login-form__checkbox{
+    @apply flex items-center cursor-pointer
+}
+.mgi__login-from__checkbox-block{
+    @apply h-4 w-4 mr-2 rounded-[3px]
+}
+.mgi__login-form__checkbox span{
+    @apply text-[12px] font-thin select-none
+}
+.mgi__login-form__forgot-link{
+    @apply flex items-center
+}
+.mgi__login-form__forgot-link a{
+    @apply text-[#1bb690] text-[12px] font-bold underline
+}
+.mgi__login-form__submit{
+    @apply mt-6
+}
+.mgi__login-form__submit button{
+    @apply text-[14px] font-semibold w-full h-[38px] bg-[#208dec] text-[#FFFFFF] hover:bg-[#337ab8]
+}
+input{
+    @apply border-[#ccc] border-solid border-[1px]
+}
+#password:focus,
+#username:focus {
+    @apply border-black border-solid border-[1px] outline-none
+}
+
+#remember{
+    @apply hidden
+}
+.mgi__login-from__checkbox-block{
+    @apply relative border-[#ccc] border-solid border-[1px]
+}
+.mgi__login-from__checkbox-block::after{
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+#remember:checked ~ .mgi__login-from__checkbox-block{
+     @apply bg-[#2196F3];
+}
